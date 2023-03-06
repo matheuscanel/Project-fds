@@ -14,8 +14,7 @@
         email@cesar.school
         <img 
 scr="foto"
-width=200>
-        
+width=200>  
       </td>
       <td>
         João Pedro Dornelas
@@ -23,8 +22,7 @@ width=200>
         email@cesar.school
         <img
              scr="foto"
-             width=200>
-        
+             width=200
         </td>
       <td>
         Lucas Emery
@@ -42,11 +40,10 @@ width=200>
         <img
              scr="foto"
              width=200>
-        
         </td>
       <td>
         Sergio Mariano
-        <br />
+        <br /
         email@cesar.school
         <img
              scr="foto"
