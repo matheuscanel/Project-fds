@@ -31,7 +31,6 @@ width=200>
         <img
              scr="foto"
              width=200>
-        
         </td>
       <td>
         Matheus Canel
