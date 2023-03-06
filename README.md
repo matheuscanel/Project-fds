@@ -14,7 +14,7 @@
       <td>
         Enzo Nunes
         <br />
-        email@cesar.school
+        ebn@cesar.school
         <img 
 scr="foto"
 width=200>  
@@ -47,7 +47,7 @@ width=200>
         </td>
       <td>
         Sergio Mariano
-        <br /
+        <br />
         sgm2@cesar.school
         <img
              scr="foto"
