@@ -1,7 +1,9 @@
 # camisasNE
 
 <h2>Produto<h2>
-  qualquer texto
+  O nosso produto consiste na criação de um site que disponibilize a venda de camisas dos maiores clubes nordestinos.
+  Dentro desse site pretendemos disponibilizar os uniformes das equipes que estão disputando a copa do nordeste de 2023, o maior torneio regional do Brasil. 
+  
  
   
   
@@ -19,7 +21,7 @@ width=200>
       <td>
         João Pedro Dornelas
         <br />
-        email@cesar.school
+        jprda@cesar.school
         <img
              scr="foto"
              width=200
