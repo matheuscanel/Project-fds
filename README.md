@@ -43,7 +43,7 @@ width=200>
       <td>
         Sergio Mariano
         <br /
-        email@cesar.school
+        sgm2@cesar.school
         <img
              scr="foto"
              width=200>
