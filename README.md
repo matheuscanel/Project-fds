@@ -7,9 +7,7 @@
   
  
   
-  
-##Equipe
-  
+ <h2>Equipe<h2/>
   <table>
     <tr>
       <td>
