@@ -48,7 +48,7 @@
         mxgtc@cesar.school
 <br>
 
-        <img src="canel.jpeg" alt="">
+        <img src="https://media.licdn.com/dms/image/C4E03AQFrYNAq1f_k5Q/profile-displayphoto-shrink_200_200/0/1660149740215?e=1683763200&v=beta&t=CM4dFPAi7JHwvIXoIdWr7tDZorLQZQOSBPLYUc6WBeE" alt="">
        
         </td>
       
@@ -69,4 +69,4 @@
         <br />
         tlvs@cesar.school
 <br>
-        <img src="Thiago.png" alt="">
+        <img src="https://media.licdn.com/dms/image/D4D03AQFvkXZAgyzRXA/profile-displayphoto-shrink_200_200/0/1664574837648?e=1683763200&v=beta&t=_d6lpUqPqdIyCLaLrOTt4if5t03IVn8kprbk3RRicuI" alt="">
