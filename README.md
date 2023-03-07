@@ -24,7 +24,7 @@ width=200>
         <br />
         jprda@cesar.school
         <img
-             scr="foto"
+             scr="https://media.licdn.com/dms/image/C4E03AQFNx_SdHL32vA/profile-displayphoto-shrink_200_200/0/1660256684950?e=1683763200&v=beta&t=yMsERIMS0_fJLu30p6WC0xVc2Twv3jGmCcbvmF2Hwr4"
              width=200
         </td>
       <td>
@@ -32,7 +32,7 @@ width=200>
         <br />
         llse@cesar.school
         <img
-             scr="foto"
+             scr="https://media.licdn.com/dms/image/D4D03AQFYyhGs4dWOCQ/profile-displayphoto-shrink_200_200/0/1668562476386?e=1683763200&v=beta&t=_bbJEKKtb-ECwqooUATwF35oN5lSogcZueHpZJBNOqE"
              width=200>
         </td>
     </tr>
@@ -42,7 +42,7 @@ width=200>
         <br />
         mxgtc@cesar.school
         <img
-             scr="foto"
+             scr="https://media.licdn.com/dms/image/C4E03AQFrYNAq1f_k5Q/profile-displayphoto-shrink_200_200/0/1660149740215?e=1683763200&v=beta&t=CM4dFPAi7JHwvIXoIdWr7tDZorLQZQOSBPLYUc6WBeE"
              width=200>
         </td>
       <td>
@@ -50,7 +50,7 @@ width=200>
         <br />
         sgm2@cesar.school
         <img
-             scr="foto"
+             scr="https://media.licdn.com/dms/image/D4D03AQF16DvQn-HVkw/profile-displayphoto-shrink_200_200/0/1678213397309?e=1683763200&v=beta&t=XjI-h9-AboHbKUuJL5QAUJZO09MKE3v9g7aJTV5W3CQ"
              width=200>
         </td>
       <td>
@@ -58,5 +58,8 @@ width=200>
         <br />
         tlvs@cesar.school
         <img
-             scr="foto"
+             scr="https://media.licdn.com/dms/image/D4D03AQFvkXZAgyzRXA/profile-displayphoto-shrink_200_200/0/1664574837648?e=1683763200&v=beta&t=_d6lpUqPqdIyCLaLrOTt4if5t03IVn8kprbk3RRicuI"
              width=200>
+        </td>
+    </tr>
+   </table>
