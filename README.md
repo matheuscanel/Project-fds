@@ -15,48 +15,58 @@
         Enzo Nunes
         <br />
         ebn@cesar.school
-        <img 
-scr="foto"
-width=200>  
+
+<br>
+
+        <img src="Coxa2.jpeg" alt="">
+         
       </td>
       <td>
         João Pedro Dornelas
         <br />
         jprda@cesar.school
-        <img
-             scr="foto"
-             width=200
+ <br>
+        
+        <img src="JP.jpeg" alt="">
+        
         </td>
       <td>
         Lucas Emery
         <br />
         llse@cesar.school
-        <img
-             scr="foto"
-             width=200>
+
+<br>
+
+       <img src="Lucas2.jpeg" alt="">
         </td>
     </tr>
     <tr>
+      
       <td>
         Matheus Canel
         <br />
         mxgtc@cesar.school
-        <img
-             scr="foto"
-             width=200>
+<br>
+
+        <img src="canel.jpeg" alt="">
+       
         </td>
-      <td>
+      
+        <td>
+
         Sergio Mariano
         <br />
         sgm2@cesar.school
-        <img
-             scr="foto"
-             width=200>
+ <br>
+
+        <img src="Sergio2.jpeg" alt="">
+
         </td>
+        
       <td>
+
         Thiago von Sohsten
         <br />
         tlvs@cesar.school
-        <img
-             scr="foto"
-             width=200>
+<br>
+        <img src="Thiago.png" alt="">
