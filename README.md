@@ -60,7 +60,7 @@
         sgm2@cesar.school
     <br>
 
-        <img src="Sergio2.jpeg" alt="">
+        <img src="https://media.licdn.com/dms/image/D4D03AQF16DvQn-HVkw/profile-displayphoto-shrink_200_200/0/1678213397309?e=1683763200&v=beta&t=XjI-h9-AboHbKUuJL5QAUJZO09MKE3v9g7aJTV5W3CQ" alt="">
 
         </td>
         
