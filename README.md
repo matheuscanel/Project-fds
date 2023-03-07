@@ -16,7 +16,7 @@
         <br />
         ebn@cesar.school
 
-<br>
+        <br>
 
         <img src="Coxa2.jpeg" alt="">
          
@@ -25,9 +25,10 @@
         João Pedro Dornelas
         <br />
         jprda@cesar.school
- <br>
+
+        <br>
         
-        <img src="JP.jpeg" alt="">
+        <img src="https://media.licdn.com/dms/image/C4E03AQFNx_SdHL32vA/profile-displayphoto-shrink_200_200/0/1660256684950?e=1683763200&v=beta&t=yMsERIMS0_fJLu30p6WC0xVc2Twv3jGmCcbvmF2Hwr4" alt="">
         
         </td>
       <td>
@@ -35,9 +36,9 @@
         <br />
         llse@cesar.school
 
-<br>
+        <br>
 
-       <img src="Lucas2.jpeg" alt="">
+       <img src="https://media.licdn.com/dms/image/D4D03AQFYyhGs4dWOCQ/profile-displayphoto-shrink_200_200/0/1668562476386?e=1683763200&v=beta&t=_bbJEKKtb-ECwqooUATwF35oN5lSogcZueHpZJBNOqE" alt="">
         </td>
     </tr>
     <tr>
@@ -57,7 +58,7 @@
         Sergio Mariano
         <br />
         sgm2@cesar.school
- <br>
+    <br>
 
         <img src="Sergio2.jpeg" alt="">
 
