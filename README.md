@@ -16,7 +16,7 @@
         <br />
         ebn@cesar.school
         <img 
-scr="foto"
+scr="https://media.licdn.com/dms/image/D4D03AQGFtXqHu6QskA/profile-displayphoto-shrink_200_200/0/1678274169814?e=1683763200&v=beta&t=5QtcSnj6sQ8oEk723vSokGAd5ezqxAJcAQHwGzlXEpQ"
 width=200>  
       </td>
       <td>
