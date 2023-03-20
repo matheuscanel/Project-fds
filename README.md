@@ -59,8 +59,7 @@ width=200>
         tlvs@cesar.school
         <img
              scr="https://media.licdn.com/dms/image/D4D03AQFvkXZAgyzRXA/profile-displayphoto-shrink_200_200/0/1664574837648?e=1683763200&v=beta&t=_d6lpUqPqdIyCLaLrOTt4if5t03IVn8kprbk3RRicuI"
-             width=200>
-             
+             width=200>        
         </td>
     </tr>
    </table>
