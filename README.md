@@ -60,6 +60,8 @@ width=200>
         <img
              scr="https://media.licdn.com/dms/image/D4D03AQFvkXZAgyzRXA/profile-displayphoto-shrink_200_200/0/1664574837648?e=1683763200&v=beta&t=_d6lpUqPqdIyCLaLrOTt4if5t03IVn8kprbk3RRicuI"
              width=200>
+             
+        <a href="url">https://camisasnordeste.atlassian.net/jira/software/projects/CAM/boards/2</a>
         </td>
     </tr>
    </table>
