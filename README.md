@@ -60,6 +60,9 @@ width=200>
         <img
              scr="https://media.licdn.com/dms/image/D4D03AQFvkXZAgyzRXA/profile-displayphoto-shrink_200_200/0/1664574837648?e=1683763200&v=beta&t=_d6lpUqPqdIyCLaLrOTt4if5t03IVn8kprbk3RRicuI"
              width=200>        
+             
+             scr="https://www.figma.com/proto/XLi70MnLD6UtS3jarabPwM/Untitled?node-id=2-6&scaling=min-zoom&page-id=2%3A5&starting-point-node-id=2%3A6&show-proto-sidebar=1"
+             width=200>
         </td>
     </tr>
    </table>
