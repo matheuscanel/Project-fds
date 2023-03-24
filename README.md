@@ -65,5 +65,5 @@ width=200>
    </table>
    
    <a href="url">https://camisasnordeste.atlassian.net/jira/software/projects/CAM/boards/2</a>
-   <a href="url">[https://camisasnordeste.atlassian.net/jira/software/projects/CAM/boards/2](https://www.figma.com/proto/XLi70MnLD6UtS3jarabPwM/Untitled?node-id=2-6&scaling=min-zoom&page-id=2%3A5&starting-point-node-id=2%3A6&show-proto-sidebar=1)</a>
+   <a href="url">https://www.figma.com/proto/XLi70MnLD6UtS3jarabPwM/Untitled?node-id=2-6&scaling=min-zoom&page-id=2%3A5&starting-point-node-id=2%3A6&show-proto-sidebar=1</a>
    
