@@ -68,3 +68,5 @@ width=200>
    
    <b>LINK DO FIGMA: </b><a href="url">https://www.figma.com/proto/XLi70MnLD6UtS3jarabPwM/Untitled?node-id=2-6&scaling=min-zoom&page-id=2%3A5&starting-point-node-id=2%3A6&show-proto-sidebar=1</a>
    
+   <b>LINK DO DRIVE: </b><a href="url">https://drive.google.com/drive/folders/1nBdENzrixiZs0JiLjtNTsPyQU-fRufkP?hl=pt-BR</a>
+   
