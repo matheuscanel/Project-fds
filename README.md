@@ -1,11 +1,9 @@
 <h1>CamisasNE<h1>
-
 <h2>Produto<h2>
   O nosso produto consiste na criação de um site que disponibilize a venda de camisas dos maiores clubes nordestinos.
   Dentro desse site pretendemos disponibilizar os uniformes das equipes que estão disputando a copa do nordeste de 2023,
-  o maior torneio regional do Brasil.
-  Fora isso disponibilizaremos a melhor qualidade de produto, com os melhores preços 
-  do país além de um site acessível e intuitivo.
+  o maior torneio regional do Brasil. 
+  Fora isso disponibilizaremos a melhor qualidade de produto, com os melhores preços do país além de um site acessível e intuitivo.
   
  
   
@@ -66,8 +64,8 @@ width=200>
    </table>
    
    <b>LINK DO JIRA: </b><a href="url">https://camisasnordeste.atlassian.net/jira/software/projects/CAM/boards/2</a>
-   
+
    <b>LINK DO FIGMA: </b><a href="url">https://www.figma.com/proto/XLi70MnLD6UtS3jarabPwM/Untitled?node-id=2-6&scaling=min-zoom&page-id=2%3A5&starting-point-node-id=2%3A6&show-proto-sidebar=1</a>
-   
+
    <b>LINK DO DRIVE: </b><a href="url">https://drive.google.com/drive/folders/1nBdENzrixiZs0JiLjtNTsPyQU-fRufkP?hl=pt-BR</a>
    
