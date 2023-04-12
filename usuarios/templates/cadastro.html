@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela do cadastro</title>
+    <link rel="stylesheet" href="./css/teladecadastro.css">
+</head>
+
+<body>
+    <div id="main-container">
+        <div class="cadastro">
+            <h1>Tela de Cadastro</h1>
+            <form id="register form">
+
+            <form action ="{% url 'cadastro' %}" method = "POST">
+                <div class="full box">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="half box">
+                    <label for="last name">Sobrenome</label>
+                    <input type="text" name="name" id="last name" placeholder="Digite seu sobrenome" required>
+
+                </div>
+                <div class="half box">
+                    <label for="name">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="half box">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password" placeholder="Digite a sua senha" required>
+                </div>
+                <div class="half box">
+                    <label for="passconfirmation">Repetir senha</label>
+                    <input type="password" name="passconfirmation" id="passconfirmation"
+                        placeholder="Confirme sua senha" required>
+                </div>
+                <div class="full-box">
+                    <input type="checkbox" name="agreement" id="agreement" required>
+                    <label for="agreement" id="agreement">Eu li e aceito os<a href="#"> termos de uso</a></label>
+                </div>
+                <div class="full-box">
+                    <a href="login.html" target="_self"><input type="button" id="btn-submit"
+                            value="Registrar"></a>
+                </div>
+            </form>
+        </div>
+        <p class="error-validation template"></p>
+
+</body>
+
+</html>
