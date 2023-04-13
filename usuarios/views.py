@@ -23,7 +23,7 @@ def cadastro(request):
             user = User.objects.create_user(username = username, email = email, password = senha)
             user.save()
 
-            return render(request, 'login.html')#teste
+            return render(request, 'login.html') #teste
 
 def login(request):
         if request.method == "GET":
@@ -37,13 +37,24 @@ def login(request):
 
             if user:
                 login_django(request, user)
-                return HttpResponse('home')
+                return render(request, 'home.html')
             else:
                 return HttpResponse('Email ou senha invalidos')
             
 
 @login_required(login_url= "/usuarios/login")
+
 def home(request):
-        return HttpResponse('home')
+        if request.method == "GET":
+        
+            return render(request, 'home.html')
+        
+def confirmar_compra (request):
+    if request.method == "GET":
+        return HttpResponse("Tela de confirmar compra") #retornar o html
+    else: 
+
+        return
+        
 
     
