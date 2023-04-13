@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse
 from django. contrib.auth.models import User
 from django.contrib.auth import authenticate, login
@@ -45,5 +45,22 @@ def login(request):
 @login_required(login_url= "/usuarios/login")
 def home(request):
         return HttpResponse('home')
+
+from .models import Carrinho, ItemCarrinho, Produto
+
+def adicionar_ao_carrinho(request, produto_id):
+    produto = get_object_or_404 (Produto, pk=produto_id)
+    carrinho, _ = Carrinho.objects.get_or_create(usuario=request.user)
+    
+    item, criado = ItemCarrinho.objects.get_or_create(
+        produto=produto,
+        carrinho=carrinho
+    )
+
+    if not criado:
+        item.quantidade += 1
+        item.save()
+
+    return redirect('nome_da_view_da_loja')
 
     
