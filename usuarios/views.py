@@ -4,6 +4,8 @@ from django. contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
+from .forms import TeamSelectionForm
+from django.shortcuts import redirect
 
 def cadastro(request):
         if request.method == "GET":
@@ -23,7 +25,7 @@ def cadastro(request):
             user = User.objects.create_user(username = username, email = email, password = senha)
             user.save()
 
-            return render(request, 'login.html') #teste
+            return redirect ('team_selection') #teste
 
 def login(request):
         if request.method == "GET":
@@ -37,7 +39,7 @@ def login(request):
 
             if user:
                 login_django(request, user)
-                return render(request, 'home.html')
+                return redirect('home')
             else:
                 return HttpResponse('Email ou senha invalidos')
             
@@ -55,6 +57,18 @@ def confirmar_compra (request):
     else: 
 
         return
+
+def team_selection(request):
+    if request.method == 'POST':
+        form = TeamSelectionForm(request.POST)
+        if form.is_valid():
+            team = form.cleaned_data['team']
+            # Aqui você pode adicionar o que você quer fazer com a seleção do time
+            return render(request, 'confirmation.html', {'team': team})
+    else:
+        form = TeamSelectionForm()
+
+    return render(request, 'team_selection.html', {'form': form})
         
 
     
