@@ -88,4 +88,5 @@ def adicionar_ao_carrinho(request, produto_id):
 
     return redirect('nome_da_view_da_loja')
 
-    
+def inicial(request):
+          return render(request, 'inicial.html')
