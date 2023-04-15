@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-top: 5;
+            padding-top: 20px;
+            margin-left: 80px;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .product-image {
+            width: 300px;
+            height: 300px;
+            background-color: #f1f1f1;
+            margin-left : 100px;
+            margin-right: 300px;
+            border: 2px solid black 
+        }
+
+        .product-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail {
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu Carrinho</h1>
+    <div class="container">
+        <div class="product-image">
+          
+        </div>
+        <div class="product-details">
+            <div class="detail">Tamanho: </div>
+            <div class="detail">Valor: R$ </div>
+            <div class="detail">Total: R$ </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button onclick="location.href='home.html'">Home</button>
+        <button onclick="location.href='finalizar.html'">Confirmar Compra</button>
+    </div>
+</body>
+</html>
