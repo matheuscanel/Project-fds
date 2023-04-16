@@ -1,0 +1,8 @@
+{% for produto in produtos %}
+    <div class="produto">
+        <h3>{{ produto.nome }}</h3>
+        <p>{{ produto.descricao }}</p>
+        <p>Preço: {{ produto.preco }}</p>
+        <a href="{% url 'adicionar_ao_carrinho' produto.id %}">Adicionar ao carrinho</a>
+    </div>
+{% endfor %}

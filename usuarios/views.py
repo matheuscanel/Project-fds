@@ -90,3 +90,18 @@ def adicionar_ao_carrinho(request, produto_id):
 
 def inicial(request):
           return render(request, 'inicial.html')
+
+def exibir_carrinho(request):
+    try:
+        carrinho = Carrinho.objects.get(usuario=request.user)
+        itens_carrinho = ItemCarrinho.objects.filter(carrinho=carrinho)
+    except Carrinho.DoesNotExist:
+        carrinho = None
+        itens_carrinho = None
+
+    context = {
+        'carrinho': carrinho,
+        'itens_carrinho': itens_carrinho,
+    }
+
+    return render(request, 'carrinho.html', context)
