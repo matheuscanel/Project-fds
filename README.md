@@ -70,6 +70,5 @@ width=200>
    <b>LINK DO DRIVE: </b><a href="url">https://drive.google.com/drive/folders/1nBdENzrixiZs0JiLjtNTsPyQU-fRufkP?hl=pt-BR</a>
    
     <h2>Relato de entrega 2<h2/>
-    
-    Para a entrega 2 fomos divididos em duplas para realização das atividades, onde cada dupla era responsável por uma história. Além disso, todos estavam responsáveis     pelo direcionamento de paginas e urls no django. As duplas montadas foram Matheus Canel e João Pedro Dornelas, Enzo Nunes e Lucas Emery e também Thiago von Sohsten     e Sergio Gouveia. Portanto, foi dessa forma que foi organizada esta entrega do projeto NE de 3 funcionalides, além de paginas html/css, login e autenticação de         usuario.
+      Para a entrega 2 fomos divididos em duplas para realização das atividades, onde cada dupla era responsável por uma história. Além disso, todos estavam responsáveis pelo direcionamento de paginas e urls no django. As duplas montadas foram Matheus Canel e João Pedro Dornelas, Enzo Nunes e Lucas Emery e também Thiago von Sohsten e Sergio Gouveia. Portanto, foi dessa forma que foi organizada esta entrega do projeto NE de 3 funcionalides, além de paginas html/css, login e autenticação de usuario.
    
