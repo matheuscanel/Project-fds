@@ -44,7 +44,7 @@ def login(request):
                 return HttpResponse('Email ou senha invalidos')
             
 
-
+@login_required(login_url= "/usuarios/carrinho/")
 
 def home(request):
         if request.method == "GET":
