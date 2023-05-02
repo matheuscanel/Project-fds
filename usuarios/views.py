@@ -42,6 +42,7 @@ def login(request):
             return HttpResponse('Email ou senha invalidos')
 
 
+@login_required(login_url="/usuarios/carrinho/")
 def home(request):
     if request.method == "GET":
         return render(request, 'home.html')
@@ -49,7 +50,7 @@ def home(request):
 
 def confirmar_compra(request):
     if request.method == "GET":
-        return HttpResponse("Tela de confirmar compra")  # retornar o html
+        return HttpResponse("Tela de confirmar compra")  
     else:
         return
 

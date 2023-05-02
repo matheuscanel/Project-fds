@@ -1,166 +1,51 @@
-<html><head>
-	<title>Camisas NE</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-	{
-		box-sizing: border-box;
-	  }
-	  
-	  body {
-		font-family: Arial, sans-serif;
-		margin: 0;
-		padding: 0;
-	  }
-	  
-	  
-	  
-	  header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: #4CAF50;
-		color: #fff;
-		padding: 20px;
-	  }
-	  
-	  h1 {
-		margin: 0;
-		font-size: 36px;
-		font-weight: bold;
-	  }
-	  
-	  a {
-		color: #fff;
-		font-size: 24px;
-		text-decoration: none;
-	  }
-	  
-
-	  
-	  main {
-		padding: 20px;
-	  }
-	  
-	  section {
-		margin-bottom: 40px;
-	  }
-	  
-	  h2 {
-		font-size: 24px;
-		font-weight: bold;
-		margin-bottom: 20px;
-	  }
-	  
-	  ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
-	  }
-	  
-	  li {
-		margin: 10px;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		overflow: hidden;
-		flex-basis: calc(33.33% - 20px);
-	  }
-	  
-	  img {
-		max-width: 100%;
-		display: block;
-	  }
-	  
-	  h3 {
-		font-size: 18px;
-		font-weight: bold;
-		margin: 10px;
-	  }
-	  
-	  p {
-		font-size: 16px;
-		color: #666;
-		margin: 10px;
-	  }
-	  
-	  button {
-		display: block;
-		margin: 10px auto;
-		padding: 10px 20px;
-		font-size: 18px;
-		font-weight: bold;
-		text-align: center;
-		text-decoration: none;
-		color: #fff;
-		background-color: #4CAF50;
-		border-radius: 5px;
-		border: none;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-	  }
-	  
-	  button:hover {
-		background-color: #3e8e41;
-	  }
-	  
-	 
-	  
-	  footer {
-		background-color: #ccc;
-		padding: 20px;
-		text-align: center;
-	  }
-	  
-	  
-	  
-	  @media (max-width: 768px) {
-		li {
-		  flex-basis: calc(50% - 20px);
-		}
-	  }
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camisas NE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* ... */
+    </style>
 </head>
 <body>
-	<header>
-		<h1>Camisas NE</h1>
-		<a href="/usuarios/login/"><button>LOGIN</button></a>
-		<br/>
-		<br/>
-		<a href="/usuarios/cadastro/"><button>CADASTRO</button></a>
-	</header>
-	<main>
-		<section>
-			<h2>Camisas</h2>
-			<ul>
-				<li>
-					<img src="camisa1.jpg" alt="Camisa 1">
-					<h3>Camisa 1</h3>
-					<p>Camisa do Time X</p>
-					<p>Preço: R$ 99,90</p>
-					<a href="/usuarios/adicionar_ao_carrinho/">	<button>Adicionar ao Carrinho</button>
-				</li>
-				<li>
-					<img src="camisa2.jpg" alt="Camisa 2">
-					<h3>Camisa 2</h3>
-					<p>Camisa do Time Y</p>
-					<p>Preço: R$ 89,90</p>
-					<a href="/usuarios/adicionar_ao_carrinho/">	<button>Adicionar ao Carrinho</button>
-				</li>
-				<li>
-					<img src="camisa3.jpg" alt="Camisa 3">
-					<h3>Camisa 3</h3>
-					<p>Camisa do Time Z</p>
-					<p>Preço: R$ 109,90</p>
-					<a href="/usuarios/adicionar_ao_carrinho/">	<button>Adicionar ao Carrinho</button>
-				</li>
-			</ul>
-		</section>
-	</main>
-	<footer>
-		<a href="/usuarios/carrinho/"><button>Carrinho</button></a>
-	</footer>
-
-
-</body></html>
+    <header>
+        <h1>Camisas NE</h1>
+        <a href="/usuarios/login/"><button>LOGIN</button></a>
+        <br/>
+        <br/>
+        <a href="/usuarios/cadastro/"><button>CADASTRO</button></a>
+    </header>
+    <main>
+        <section>
+            <h2>Camisas</h2>
+            <ul>
+                <li>
+                    <img src="camisa1.jpg" alt="Camisa 1">
+                    <h3>Camisa 1</h3>
+                    <p>Camisa do Time X</p>
+                    <p>Preço: R$ 99,90</p>
+                    <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <img src="camisa2.jpg" alt="Camisa 2">
+                    <h3>Camisa 2</h3>
+                    <p>Camisa do Time Y</p>
+                    <p>Preço: R$ 89,90</p>
+                    <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <img src="camisa3.jpg" alt="Camisa 3">
+                    <h3>Camisa 3</h3>
+                    <p>Camisa do Time Z</p>
+                    <p>Preço: R$ 109,90</p>
+                    <button>Adicionar ao Carrinho</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <a href="/usuarios/carrinho/"><button>Carrinho</button></a>
+    </footer>
+</body>
+</html>
