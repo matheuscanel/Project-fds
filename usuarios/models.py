@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings
+from django.contrib.auth.models import AbstractUser
 
 class Produto(models.Model):
     nome = models.CharField(max_length=255)
@@ -9,7 +10,7 @@ class Produto(models.Model):
     estoque = models.PositiveIntegerField()
 
 class Carrinho(models.Model):
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
 class ItemCarrinho(models.Model):
     produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
@@ -25,3 +26,6 @@ class UsuariosCarrinhoMixin:
         if not criado:
             item_carrinho.quantidade += quantidade
             item_carrinho.save()
+
+class CustomUser(AbstractUser):
+    receber_emails = models.BooleanField(default=False)
