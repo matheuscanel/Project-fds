@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User
 
 class Produto(models.Model):
     nome = models.CharField(max_length=255)
@@ -29,3 +30,15 @@ class UsuariosCarrinhoMixin:
 
 class CustomUser(AbstractUser):
     receber_emails = models.BooleanField(default=False)
+    time_coracao = models.CharField(max_length=255, null=True, blank=True)
+
+    from django.db import models
+from django.contrib.auth.models import User
+
+class Avaliacao(models.Model):
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    avaliacao = models.IntegerField()
+    comentario = models.TextField()
+
+    class Meta:
+        verbose_name_plural = 'Avaliacoes'

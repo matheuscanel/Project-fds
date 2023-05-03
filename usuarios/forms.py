@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from .models import CustomUser
+from .models import Avaliacao
 
 class TeamSelectionForm(forms.Form):
     OPTIONS = [
@@ -30,4 +31,12 @@ class CadastroForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2', 'receber_emails']
         widgets = {
             'receber_emails': forms.CheckboxInput(attrs={'class': 'form-check-input'})
+        }
+
+class AvaliacaoForm(forms.ModelForm):
+    class Meta:
+        model = Avaliacao
+        fields = ['avaliacao', 'comentario']
+        widgets = {
+            'avaliacao': forms.RadioSelect,
         }

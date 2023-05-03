@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Avaliar Loja</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar Avaliação</button>
+    <button onclick="window.location.href='/'">Voltar</button>
+  </form>
+{% endblock %}

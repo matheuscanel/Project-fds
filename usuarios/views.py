@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 from .forms import TeamSelectionForm, CadastroForm
 from django.shortcuts import redirect
 from .models import Carrinho, ItemCarrinho, Produto
+from .forms import AvaliacaoForm
+from django.contrib.auth.decorators import login_required
 
 
 def cadastro(request):
@@ -19,6 +21,8 @@ def cadastro(request):
             user = form.save(commit=False)
             user.set_password(user.password)
             user.save()
+
+            request.session['user_id'] = user.id  
 
             return redirect('team_selection')
         else:
@@ -59,7 +63,14 @@ def team_selection(request):
         form = TeamSelectionForm(request.POST)
         if form.is_valid():
             team = form.cleaned_data['team']
-            # Aqui você pode adicionar o que você quer fazer com a seleção do time
+
+            user_id = request.session.get('user_id')  # Obtenha o ID do usuário da sessão
+            if user_id:
+                user = CustomUser.objects.get(pk=user_id)
+                user.time_coracao = team
+                user.save()
+                del request.session['user_id']  # Remova o ID do usuário da sessão
+
             return render(request, 'confirmation.html', {'team': team})
     else:
         form = TeamSelectionForm()
@@ -101,3 +112,15 @@ def exibir_carrinho(request):
     }
 
     return render(request, 'carrinho.html', context)
+
+def avaliar(request):
+    if request.method == 'POST':
+        form = AvaliacaoForm(request.POST)
+        if form.is_valid():
+            avaliacao = form.save(commit=False)
+            avaliacao.usuario = request.user
+            avaliacao.save()
+            return redirect('home')
+    else:
+        form = AvaliacaoForm()
+    return render(request, 'avaliar.html', {'form': form})
