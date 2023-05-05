@@ -15,4 +15,5 @@ urlpatterns = [
    path('confirmar_compra/', views.confirmar_compra, name='confirmar_compra'),
 
 
+
 ]

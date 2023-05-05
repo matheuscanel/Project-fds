@@ -70,3 +70,5 @@ class Cartao(models.Model):
    expiracao_mes = models.PositiveIntegerField()
    expiracao_ano = models.PositiveIntegerField()
    cvv = models.CharField(max_length=3)
+
+
