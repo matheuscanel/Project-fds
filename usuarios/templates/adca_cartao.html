@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cadastrar Cartão e Confirmar Compra</title>
+</head>
+<body>
+   <h1>Cadastrar Cartão e Confirmar Compra</h1>
+
+
+   <form action="{% url 'confirmar_compra' %}" method="post" id="payment-form">
+       {% csrf_token %}
+
+
+       <label for="nome">Nome do titular do cartão:</label>
+       <input type="text" name="nome" id="nome" required>
+
+
+       <label for="numero">Número do cartão:</label>
+       <input type="text" name="numero" id="numero" required>
+
+
+       <label for="expiracao_mes">Mês de expiração:</label>
+       <input type="number" name="expiracao_mes" id="expiracao_mes" min="1" max="12" required>
+
+
+       <label for="expiracao_ano">Ano de expiração:</label>
+       <input type="number" name="expiracao_ano" id="expiracao_ano" min="2022" required>
+
+
+       <label for="cvv">CVV:</label>
+       <input type="text" name="cvv" id="cvv" required>
+
+
+       <button type="submit">Confirmar Compra</button>
+   </form>
+</body>
+</html>
+
+
