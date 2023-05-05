@@ -120,3 +120,6 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'usuarios.CustomUser'
+
+STRIPE_SECRET_KEY = 'your_stripe_secret_key_here'
+STRIPE_PUBLISHABLE_KEY = 'your_stripe_publishable_key_here'
