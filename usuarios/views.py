@@ -11,6 +11,8 @@ from .models import Compra, Cartao
 from .forms import CompraForm, CartaoForm
 import stripe
 from django.conf import settings
+from django.urls import reverse
+
 
 def cadastro(request):
     if request.method == "GET":
@@ -157,3 +159,19 @@ def confirmar_compra(request):
         form_cartao = CartaoForm()
 
     return render(request, 'pagamento/confirmar_compra.html', {'form_compra': form_compra, 'form_cartao': form_cartao, 'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY})
+
+
+def adicionar_cartao(request):
+    if request.method == 'GET':
+        form = CartaoForm()
+        return render(request, 'pagamento/adca_cartao.html', {'form': form})
+    else:
+        form = CartaoForm(request.POST)
+        if form.is_valid():
+            cartao = form.save(commit=False)
+            cartao.user = request.user
+            cartao.save()
+
+            return redirect(reverse('pagamento:confirmar_compra'))
+        else:
+            return render(request, 'pagamento/adca_cartao.html', {'form': form})
