@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from .models import CustomUser
 from .models import Avaliacao
+from .models import Compra, Cartao
 
 class TeamSelectionForm(forms.Form):
     OPTIONS = [
@@ -40,3 +41,13 @@ class AvaliacaoForm(forms.ModelForm):
         widgets = {
             'avaliacao': forms.RadioSelect,
         }
+
+class CompraForm(forms.ModelForm):
+    class Meta:
+        model = Compra
+        fields = ['descricao', 'valor']
+
+class CartaoForm(forms.ModelForm):
+    class Meta:
+        model = Cartao
+        fields = ['nome', 'numero', 'expiracao_mes', 'expiracao_ano', 'cvv']

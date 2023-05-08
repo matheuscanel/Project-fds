@@ -7,7 +7,11 @@ from .forms import TeamSelectionForm, CadastroForm
 from django.shortcuts import redirect
 from .models import Carrinho, ItemCarrinho, Produto
 from .forms import AvaliacaoForm
-from django.contrib.auth.decorators import login_required
+from .models import Compra, Cartao
+from .forms import CompraForm, CartaoForm
+import stripe
+from django.conf import settings
+from django.urls import reverse
 
 
 def cadastro(request):
@@ -125,3 +129,50 @@ def avaliar(request):
     else:
         form = AvaliacaoForm()
     return render(request, 'avaliar.html', {'form': form})
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
+
+def confirmar_compra(request):
+    if request.method == 'POST':
+        form_compra = CompraForm(request.POST)
+        form_cartao = CartaoForm(request.POST)
+
+        if form_compra.is_valid() and form_cartao.is_valid():
+            compra = form_compra.save(commit=False)
+            compra.user = request.user
+            compra.save()
+
+            cartao = form_cartao.save(commit=False)
+            cartao.user = request.user
+            cartao.save()
+
+            # Efetue a cobrança no Stripe
+            stripe.Charge.create(
+                amount=int(compra.valor * 100),
+                currency='brl',
+                description=compra.descricao,
+                source=request.POST['stripeToken'],
+            )
+
+            return render(request, 'pagamento/sucesso.html')
+    else:
+        form_compra = CompraForm()
+        form_cartao = CartaoForm()
+
+    return render(request, 'pagamento/confirmar_compra.html', {'form_compra': form_compra, 'form_cartao': form_cartao, 'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY})
+
+
+def adicionar_cartao(request):
+    if request.method == 'GET':
+        form = CartaoForm()
+        return render(request, 'pagamento/adca_cartao.html', {'form': form})
+    else:
+        form = CartaoForm(request.POST)
+        if form.is_valid():
+            cartao = form.save(commit=False)
+            cartao.user = request.user
+            cartao.save()
+
+            return redirect(reverse('pagamento:confirmar_compra'))
+        else:
+            return render(request, 'pagamento/adca_cartao.html', {'form': form})
