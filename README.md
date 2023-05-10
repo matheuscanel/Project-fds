@@ -55,13 +55,13 @@
         </tr>
        </table>
        <b>LINK DO JIRA: </b><a href="url">https://camisasnordeste.atlassian.net/jira/software/projects/CAM/boards/2</a>
-    <br>
-       <b>LINK DO FIGMA: </b><a href="url">https://www.figma.com/proto/XLi70MnLD6UtS3jarabPwM/Untitled?node-id=2-6&scaling=min-zoom&page-id=2%3A5&starting-point-node-id=2%3A6&show-proto-sidebar=1</a>
-    <br>
+    <br> <br>
+        <b>LINK DO FIGMA: </b><a href="url">https://www.figma.com/proto/XLi70MnLD6UtS3jarabPwM/Untitled?node-id=2-6&scaling=min-zoom&page-id=2%3A5&starting-point-node-id=2%3A6&show-proto-sidebar=1</a>
+    <br> <br>
        <b>LINK DO DRIVE: </b><a href="url">https://drive.google.com/drive/folders/1nBdENzrixiZs0JiLjtNTsPyQU-fRufkP?hl=pt-BR</a>
-    <br> 
+    <br>  <br>
        <b>Relato de entrega 2: </b>  Para a entrega 2 fomos divididos em duplas para realização das atividades, onde cada dupla era responsável por uma história. Além disso, todos estavam responsáveis pelo direcionamento de paginas e urls no django. As duplas montadas foram Matheus Canel e João Pedro Dornelas, Enzo Nunes e Lucas Emery e também Thiago von Sohsten e Sergio Gouveia. Portanto, foi dessa forma que foi organizada esta entrega do projeto NE de 3 funcionalides, além de paginas html com css, login e autenticação de usuario.
-       <br>
+       <br>  <br>
        <b>Video demonstrando o app e fluxograma estão disponiveis no google drive!! </b>
    
      
