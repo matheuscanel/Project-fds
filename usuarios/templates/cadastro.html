@@ -1,6 +1,20 @@
 <html>
     <head>
-        <style>form {
+        <style>
+          header {
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          }
+          
+          img {
+            height: 100px;
+          }
+          
+          form {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -42,17 +56,21 @@
             }
           }
           </style>
+          <header>
+            <img src="https://yt3.googleusercontent.com/BsYDlC_6Z4acMxccGp56tGz_rmjbaiugT1oNcyELOXQFvzDaVI0D0IuIdpFXOsrDFZyJMRTkl5Y=s176-c-k-c0x00ffffff-no-rj" alt="Logo da Camisas NE">
+            
+            </header>
     </head>
 
     <body>
         <form action = "{% url 'cadastro' %}" method = "POST"> {% csrf_token %}
-            <input type = "text" placeholder="Username..." name="username">
+            <input type = "text" placeholder="Nome de usuário" name="username">
             <br>
             <br>
             <input type="email" placeholder="Email" name="email">
             <br>
             <br>
-            <input type = "password" placeholder="Senha..." name="senha">
+            <input type = "password" placeholder="Senha" name="senha">
             <br>
             <br>
             <input type = "submit" value="cadastrar">

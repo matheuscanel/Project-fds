@@ -1,6 +1,23 @@
 <html>
     <head>
+      <header>
+        <img src="https://yt3.googleusercontent.com/BsYDlC_6Z4acMxccGp56tGz_rmjbaiugT1oNcyELOXQFvzDaVI0D0IuIdpFXOsrDFZyJMRTkl5Y=s176-c-k-c0x00ffffff-no-rj" alt="Logo da Camisas NE">
+        
+        </header>
     <style>
+      header {
+        background-color: #4CAF50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        
+      }
+      
+      img {
+        height: 100px;
+      }
         body {
             background-color: #f2f2f2;
           }
@@ -8,7 +25,7 @@
           form {
             width: 300px;
             margin: 50px auto;
-            padding: 20px;
+            padding: 50px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -48,10 +65,11 @@
     
     <body>
         <form action = "{% url 'login' %}" method = "POST"> {% csrf_token %}
-            <input type = "text" placeholder="Username..." name="username">
+          
+          <input type = "text" placeholder="Nome de usuário" name="username">
             <br>
             <br>
-            <input type = "password" placeholder="Senha..." name="senha">
+            <input type = "password" placeholder="Senha" name="senha">
             <br>
             <br>
             <input type = "submit" value="Logar">
