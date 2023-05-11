@@ -32,9 +32,9 @@
         </tr>
         <tr>
           <td>
-            <!-- nome completo -->
+           Antonio Tenório Valença
             <br>
-            <!-- email -->
+            atvn@cesar.school
            <br>
            <!-- foto -->
             </td>
