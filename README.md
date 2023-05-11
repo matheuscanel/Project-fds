@@ -36,7 +36,7 @@
             <br>
             atvn@cesar.school
            <br>
-           <!-- foto -->
+            <img src="https://media.licdn.com/dms/image/D4D03AQFoKFeQ6xDt1A/profile-displayphoto-shrink_200_200/0/1683822586685?e=1689206400&v=beta&t=AxaDuzER-Ip4o6XYgxGZbXL_cAcDuTXsdxl-katZlsA" alt="">
             </td>
           <td>
             Sergio Mariano
