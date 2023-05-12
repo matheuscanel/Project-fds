@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import CustomUser
 from django.contrib.auth import authenticate, login as login_django
 from django.contrib.auth.decorators import login_required
-from .forms import TeamSelectionForm, CadastroForm
+from .forms import TeamSelectionForm
 from django.shortcuts import redirect
 from .models import Carrinho, ItemCarrinho, Produto
 from .forms import AvaliacaoForm
@@ -14,24 +14,27 @@ from django.conf import settings
 from django.urls import reverse
 
 
+from django.shortcuts import render, redirect
+
+
 def cadastro(request):
     if request.method == "GET":
-        form = CadastroForm()
-        return render(request, 'cadastro.html', {'form': form})
+        return render(request, 'cadastro.html')
 
-    else:
-        form = CadastroForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.set_password(user.password)
+    elif request.method == "POST":
+        try:
+            email = request.POST.get('email')
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            receber_emails = True
+
+            user = CustomUser(email=email, username=username, password=password, receber_emails=receber_emails)
             user.save()
-
             request.session['user_id'] = user.id  
-
             return redirect('team_selection')
-        else:
-            return render(request, 'cadastro.html', {'form': form})
-
+        except Exception as error:
+            print(error)
+            return HttpResponse('Erro: {}'.format(error))
 
 def login(request):
     if request.method == "GET":
