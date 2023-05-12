@@ -26,13 +26,13 @@ class TeamSelectionForm(forms.Form):
 
     team = forms.ChoiceField(choices=OPTIONS, widget=forms.RadioSelect)
 
-class CadastroForm(UserCreationForm):
-    class Meta:
-        model = CustomUser
-        fields = ['username', 'email', 'password1', 'password2', 'receber_emails']
-        widgets = {
-            'receber_emails': forms.CheckboxInput(attrs={'class': 'form-check-input'})
-        }
+# class CadastroForm(UserCreationForm):
+#     class Meta:
+#         model = CustomUser
+#         fields = ['username', 'email', 'password1', 'password2', 'receber_emails']
+#         widgets = {
+#             'receber_emails': forms.CheckboxInput(attrs={'class': 'form-check-input'})
+#         }
 
 class AvaliacaoForm(forms.ModelForm):
     class Meta:
