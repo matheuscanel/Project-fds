@@ -12,7 +12,7 @@ from .forms import CompraForm, CartaoForm
 import stripe
 from django.conf import settings
 from django.urls import reverse
-
+from django.contrib.auth import get_user_model
 
 from django.shortcuts import render, redirect
 
@@ -28,7 +28,8 @@ def cadastro(request):
             password = request.POST.get('password')
             receber_emails = True
 
-            user = CustomUser(email=email, username=username, password=password, receber_emails=receber_emails)
+            user = CustomUser.objects.create_user(email=email, username=username, password=password, receber_emails=receber_emails)
+
             user.save()
             request.session['user_id'] = user.id  
             return redirect('team_selection')
@@ -40,17 +41,22 @@ def login(request):
     if request.method == "GET":
         return render(request, 'login.html')
 
-    else:
+    elif request.method == "POST":
         username = request.POST.get('username')
-        senha = request.POST.get('senha')
+        password = request.POST.get('password')
 
-        user = authenticate(username=username, password=senha)
+        print(f'username: {username}')
+        print(f'password: {password}')
+
+        user = authenticate(username=username, password=password)
+        print(f'user: {user}')
 
         if user:
-            login_django(request, user)
+            login_required(request, user)
             return redirect('home')
         else:
-            return HttpResponse('Email ou senha invalidos')
+            return HttpResponse('Username ou senha invalidos')
+
 
 
 def home(request):
