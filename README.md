@@ -60,7 +60,7 @@
     <br> <br>
        <b>LINK DO DRIVE: </b><a href="url">https://drive.google.com/drive/folders/10L981qgCX8zqZXlHi9AW7lybLNv0XtmI?hl=pt-BR</a>
     <br>  <br>
-       <b>Relato de entrega 2: </b>  Para a entrega 2 fomos divididos em duplas para realização das atividades, onde cada dupla era responsável por uma história. Além disso, todos estavam responsáveis pelo direcionamento de paginas e urls no django. As duplas montadas foram Matheus Canel e João Pedro Dornelas, Enzo Nunes e Lucas Emery e também Thiago von Sohsten e Sergio Gouveia. Portanto, foi dessa forma que foi organizada esta entrega do projeto NE de 3 funcionalides, além de paginas html com css, login e autenticação de usuario.
+       <b>Relato de entrega 3: </b>  Para a entrega 2 fomos divididos em duplas para realização das atividades, onde cada dupla era responsável por uma história, e o grupo realizou em conjunto o TDD e o AWS, além disso, todos estavam responsáveis pelo direcionamento de paginas e urls no django. As duplas montadas foram Lucas Emery e João Pedro Dornelas, Enzo Nunes e Antônio Valença e também Thiago von Sohsten e Sergio Gouveia. Portanto, foi dessa forma que foi organizada esta entrega do projeto NE de 3 funcionalidades, além de paginas html com css, login e autenticação de usuario,TDD e AWS.
        <br>  <br>
        <b>Video demonstrando o app e fluxograma estão disponiveis no google drive!! </b>
    
