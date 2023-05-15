@@ -112,19 +112,24 @@ def inicial(request):
 
 
 def exibir_carrinho(request):
-    try:
-        carrinho = Carrinho.objects.get(usuario=request.user)
-        itens_carrinho = ItemCarrinho.objects.filter(carrinho=carrinho)
-    except Carrinho.DoesNotExist:
-        carrinho = None
-        itens_carrinho = None
+    if request.method == 'GET':
+        if request.user.is_authenticated:
+            try:
+                carrinho = Carrinho.objects.get(usuario_id=request.user.id)
+                itens_carrinho = ItemCarrinho.objects.filter(carrinho=carrinho)
+            except Carrinho.DoesNotExist:
+                carrinho = None
+                itens_carrinho = None
+        else:
+            carrinho = None
+            itens_carrinho = None
 
-    context = {
-        'carrinho': carrinho,
-        'itens_carrinho': itens_carrinho,
-    }
+        context = {
+            'carrinho': carrinho,
+            'itens_carrinho': itens_carrinho,
+        }
 
-    return render(request, 'carrinho.html', context)
+        return render(request, 'carrinho.html', context)
 
 def avaliar(request):
     if request.method == 'POST':
