@@ -64,13 +64,6 @@ def home(request):
         return render(request, 'home.html')
 
 
-def confirmar_compra(request):
-    if request.method == "GET":
-        return HttpResponse("Tela de confirmar compra")  # retornar o html
-    else:
-        return
-
-
 def team_selection(request):
     if request.method == 'POST':
         form = TeamSelectionForm(request.POST)
@@ -189,3 +182,7 @@ def adicionar_cartao(request):
             return redirect(reverse('pagamento:confirmar_compra'))
         else:
             return render(request, 'pagamento/adca_cartao.html', {'form': form})
+        
+def finalizar_compra(request):
+    
+    return render(request, 'adca_cartao.html')

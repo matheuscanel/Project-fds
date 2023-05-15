@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Cartão e Confirmar Compra</title>
+    <title>Cadastrar Cartão </title>
     <style>
     
 
@@ -86,7 +87,7 @@
                 </header>
 </head>
 <body>
-    <h1>Cadastrar Cartão e Confirmar Compra</h1>
+    <h1>Cadastrar Cartão </h1>
 
     <form action="{% url 'confirmar_compra' %}" method="post" id="payment-form">
         {% csrf_token %}
