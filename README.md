@@ -56,7 +56,7 @@
        </table>
        <b>LINK DO JIRA: </b><a href="url">https://camisasnordeste.atlassian.net/jira/software/projects/CAM/boards/2</a>
     <br> <br>
-        <b>LINK DO FIGMA: </b><a href="url">https://www.figma.com/proto/XLi70MnLD6UtS3jarabPwM/Untitled?node-id=2-6&scaling=min-zoom&page-id=2%3A5&starting-point-node-id=2%3A6&show-proto-sidebar=1</a>
+        <b>LINK DO FIGMA: </b><a href="url">https://www.figma.com/file/2Kh4DdPgbM3WBP0xjWb1og/Untitled?type=design&node-id=0-1&t=tZvfmlJiGYdpWRrd-0</a>
     <br> <br>
        <b>LINK DO DRIVE: </b><a href="url">https://drive.google.com/drive/folders/10L981qgCX8zqZXlHi9AW7lybLNv0XtmI?hl=pt-BR</a>
     <br>  <br>
