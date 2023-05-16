@@ -58,7 +58,7 @@
     <br> <br>
         <b>LINK DO FIGMA: </b><a href="url">https://www.figma.com/file/2Kh4DdPgbM3WBP0xjWb1og/Untitled?type=design&node-id=0-1&t=tZvfmlJiGYdpWRrd-0</a>
     <br> <br>
-        <b>LINK DO VIDEO FIGMA ENTREGA 3: </b><a href="url">https://drive.google.com/file/d/16Mt232UR4F8JOyIKlglShSAeLJA2H2xl/view?usp=share_link</a>
+        <b>LINK DO VIDEO FIGMA ENTREGA 3: </b><a href="url">https://drive.google.com/file/d/1RAG__TQLE_FxZ7JTmt0Zn4XbbDucsAmX/view?usp=sharing</a>
     <br> <br>
        <b>LINK DO DRIVE: </b><a href="url">https://drive.google.com/drive/folders/10L981qgCX8zqZXlHi9AW7lybLNv0XtmI?hl=pt-BR</a>
     <br>  <br>
