@@ -16,11 +16,11 @@
             <img src="https://media.licdn.com/dms/image/D4D03AQGFtXqHu6QskA/profile-displayphoto-shrink_200_200/0/1678274169814?e=1689206400&v=beta&t=z5n0Qf49Fc7HWxAy1xouS5HU2ykErxwYs_KpjcBn4tY" alt="">
     </td>
           <td>
-            João Pedro Dornelas
+            Lucas Dias
             <br>
-            jprda@cesar.school
+            lprd@cesar.school
             <br>
-        <img src="https://media.licdn.com/dms/image/C4E03AQFNx_SdHL32vA/profile-displayphoto-shrink_200_200/0/1660256684950?e=1689206400&v=beta&t=AtHx2Yxh_YRsIP14qIg8R9xu0GRVUuGV5O-IQHF15RA" alt="">
+        <img src="https://media.licdn.com/dms/image/C4E03AQHUw4VpVib1gQ/profile-displayphoto-shrink_200_200/0/1645445566367?e=1690416000&v=beta&t=dh8AF_mKF9VweE-H0MlXVJ5uz5gpWK-CG2J62ReQ_-M" alt="">
             </td>
           <td>
             Lucas Emery
