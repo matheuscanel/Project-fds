@@ -59,3 +59,13 @@ class Cartao(models.Model):
     expiracao_mes = models.PositiveIntegerField()
     expiracao_ano = models.PositiveIntegerField()
     cvv = models.CharField(max_length=3)
+
+class Order(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    product = models.CharField(max_length=200)
+    tracking_number = models.CharField(max_length=200)
+    status = models.CharField(max_length=200, default='Pedido Recebido')
+
+    def __str__(self):
+        return f'Pedido {self.id} - {self.product}'
+    

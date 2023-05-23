@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Rastreamento do Pedido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Acompanhar Pedido</h2>
+    <p>Número do Pedido: {{ order.id }}</p>
+    <p>Produto: {{ order.product }}</p>
+    <p>Número de Rastreamento: {{ order.tracking_number }}</p>
+    <p>Status: {{ order.status }}</p>
+</body>
+</html>

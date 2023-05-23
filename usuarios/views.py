@@ -13,6 +13,9 @@ import stripe
 from django.conf import settings
 from django.urls import reverse
 from django.contrib.auth import get_user_model
+from .models import Order
+from django.core.exceptions import PermissionDenied
+
 
 from django.shortcuts import render, redirect
 
@@ -160,12 +163,14 @@ def confirmar_compra(request):
                 source=request.POST['stripeToken'],
             )
 
-            return render(request, 'pagamento/sucesso.html')
+            # Redirecionar para 'rastrear' após a confirmação da compra
+            return redirect('rastrear')
+
     else:
         form_compra = CompraForm()
         form_cartao = CartaoForm()
 
-    return render(request, 'pagamento/confirmar_compra.html', {'form_compra': form_compra, 'form_cartao': form_cartao, 'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY})
+    return render(request, 'rastrear.html', {'form_compra': form_compra, 'form_cartao': form_cartao, 'stripe_publishable_key': settings.STRIPE_PUBLISHABLE_KEY})
 
 
 def adicionar_cartao(request):
@@ -194,3 +199,24 @@ def buscar_produto(request):
     else:
         produtos = Produto.objects.all()
     return render(request, 'home.html', {'produtos': produtos})
+
+def get_status_from_tracking_api(tracking_number):
+    # Aqui você iria fazer a chamada à API de rastreamento.
+    # Para manter as coisas simples, retornaremos um status fixo.
+    return "Em trânsito"
+
+def update_order_status(order):
+    status = get_status_from_tracking_api(order.tracking_number)
+    order.status = status
+    order.save()
+
+@login_required
+def order_status(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    if order.user != request.user:
+        raise PermissionDenied
+    update_order_status(order)
+    return render(request, 'order_status.html', {'order': order})
+
+def rastrear(request):
+    return render(request, 'pagamento/rastrear.html')
