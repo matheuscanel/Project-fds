@@ -186,3 +186,11 @@ def adicionar_cartao(request):
 def finalizar_compra(request):
     
     return render(request, 'adca_cartao.html')
+
+def buscar_produto(request):
+    query = request.GET.get('q')
+    if query:
+        produtos = Produto.objects.filter(nome__icontains=query)
+    else:
+        produtos = Produto.objects.all()
+    return render(request, 'home.html', {'produtos': produtos})
