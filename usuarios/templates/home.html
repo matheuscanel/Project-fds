@@ -7,6 +7,119 @@
     <link rel="stylesheet" href="styles.css">
     <style>
       /* The rest of your CSS... */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      
+      
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 20px;
+      }
+      
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+      }
+      
+      a {
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+      }
+      
+  
+      
+      main {
+        padding: 20px;
+      }
+      
+      section {
+        margin-bottom: 40px;
+      }
+      
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      li {
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        flex-basis: calc(33.33% - 20px);
+      }
+      
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px;
+      }
+      
+      p {
+        font-size: 16px;
+        color: #666;
+        margin: 10px;
+      }
+      
+      button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      button:hover {
+        background-color: #3e8e41;
+      }
+      
+     
+      
+      footer {
+        background-color: #4CAF50;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      
+      
+      @media (max-width: 768px) {
+        li {
+          flex-basis: calc(50% - 20px);
+        }
+      }
 
       form.search-form {
         display: flex;
@@ -42,6 +155,16 @@
 <body>
     <header>
         <!-- Seu conteúdo de cabeçalho aqui... -->
+        <img src="https://yt3.googleusercontent.com/BsYDlC_6Z4acMxccGp56tGz_rmjbaiugT1oNcyELOXQFvzDaVI0D0IuIdpFXOsrDFZyJMRTkl5Y=s176-c-k-c0x00ffffff-no-rj" alt="Logo da Camisas NE">
+ 
+      
+      <a href="/usuarios/login/"><button>LOGIN</button></a>
+      <br/>
+      <br/>
+      <a href="/usuarios/cadastro/"><button>CADASTRO</button></a>
+      <br/>
+      <br/>
+      <a href="{% url 'avaliar' %}"><button>AVALIAR LOJA</button></a> 
     </header>
     <main>
         <section>
@@ -54,6 +177,120 @@
             {% endfor %}
         </section>
         <section>
+            <ul>
+                <li>
+                    <img src="https://static.netshoes.com.br/produtos/camisa-nseis-nautico-i-2022/16/RDH-0026-016/RDH-0026-016_zoom1.jpg?ts=1657643906&ims=544x" alt="Camisa 1">
+                    
+                    <p>Camisa do Náutico</p>
+                    <p>Preço: R$ 200,00</p>
+                    <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <img src="https://static.netshoes.com.br/produtos/camisa-sport-recife-i-2021-sn-torcedor-umbro-masculina/02/2IA-1390-002/2IA-1390-002_zoom1.jpg?ts=1656919019&ims=544x" alt="Camisa 2">
+                    
+                    <p>Camisa do Sport</p>
+                    <p>Preço: R$ 200,00</p>
+                    <a href=""> <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                    <img src="https://static.netshoes.com.br/produtos/camisa-santa-cruz-i-2122-sn-torcedor-volt-masculina/23/MMC-0407-223/MMC-0407-223_zoom1.jpg?ts=1640094422" alt="Camisa 3">
+                    
+                    <p>Camisa do Santa Cruz</p>
+                    <p>Preço: R$ 200,00</p>
+                    <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+                </li>
+                <li>
+                  <img src="https://static.netshoes.com.br/produtos/camisa-pratic-salgueiro-iii-2023/10/IFB-0025-010/IFB-0025-010_zoom1.jpg?ts=1674301613&ims=544x" alt="Camisa 4">
+                  
+                  <p>Camisa do Salgueiro</p>
+                  <p>Preço: R$ 200,00</p>
+                  <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+              </li>
+                <li>
+                  <img src="https://static.netshoes.com.br/produtos/camisa-ceara-i-2223-sn-torcedor-vozao-masculina/26/QPS-0039-026/QPS-0039-026_zoom1.jpg?ts=1651770879&?ims=544xhttps://static.netshoes.com.br/produtos/camisa-ceara-i-2223-sn-torcedor-vozao-masculina/26/QPS-0039-026/QPS-0039-026_zoom1.jpg?ts=1651770879&?ims=1088x" alt="Camisa 5">
+                  
+                  <p>Camisa do Ceára</p>
+                  <p>Preço: R$ 200,00</p>
+                  <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+              </li>
+              <li>
+                <img src="https://static.netshoes.com.br/produtos/camisa-fortaleza-ii-2324-sn-leao-1918-masculina/14/FTU-0059-014/FTU-0059-014_zoom1.jpg?ts=1677158429&ims=544x" alt="Camisa 6">
+                
+                <p>Camisa Fortaleza</p>
+                <p>Preço: R$ 200,00</p>
+                <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+            </li>
+            <li>
+              <img src="https://static.netshoes.com.br/produtos/camisa-masculina-bahia-2223-torcedor-away-ii-oficial/08/LPO-0391-008/LPO-0391-008_zoom1.jpg?ts=1672421727&ims=544x" alt="Camisa 7">
+              
+              <p>Camisa do Bahia</p>
+              <p>Preço: R$ 200,00</p>
+              <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+          </li>
+          <li>
+            <img src="https://static.netshoes.com.br/produtos/camisa-vitoria-i-2018-sn-torcedor-topper-masculina/02/D30-1003-002/D30-1003-002_zoom1.jpg?ts=1680022551&ims=544x" alt="Camisa 8">
+            
+            <p>Camisa do Vitória</p>
+            <p>Preço: R$ 200,00</p>
+            <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+        </li>
+        <li>
+          <img src="https://static.netshoes.com.br/produtos/camisa-elefante-mq-abc-fc-iii-2023/10/5N7-0001-010/5N7-0001-010_zoom1.jpg?ts=1680177639&ims=544x" alt="Camisa 9">
+          
+          <p>Camisa do ABC</p>
+          <p>Preço: R$ 200,00</p>
+          <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+            <li>
+              <img src="https://static.netshoes.com.br/produtos/camisa-america-rn-kanxa-masculina/16/J96-0259-016/J96-0259-016_zoom1.jpg?ts=1680023466&ims=544x" alt="Camisa 10">
+              
+              <p>Camisa do América-RN</p>
+              <p>Preço: R$ 200,00</p>
+              <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+          </li>
+          <li>
+            <img src="https://static.netshoes.com.br/produtos/camisa-volt-csa-i-2021-juvenil/08/MMC-0274-008/MMC-0274-008_zoom1.jpg?ts=1625693840&ims=544x" alt="Camisa 11">
+            
+            <p>Camisa do CSA</p>
+            <p>Preço: R$ 200,00</p>
+            <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+              <li>
+                <img src="https://static.netshoes.com.br/produtos/camisa-regatas-crb-alagoas-iii-2022/60/0J8-0019-060/0J8-0019-060_zoom1.jpg?ts=1664816672&ims=544x" alt="Camisa 12">
+                
+                <p>Camisa do CRB</p>
+                <p>Preço: R$ 200,00</p>
+                <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+            </li>
+            <li>
+              <img src="https://static.netshoes.com.br/produtos/camisa-wa-sport-botafogo-pb-i-2022/06/FUU-0044-006/FUU-0044-006_zoom1.jpg?ts=1650906451&ims=544x" alt="Camisa 13">
+              
+              <p>Camisa do Botafogo-PB</p>
+              <p>Preço: R$ 200,00</p>
+              <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+          </li>
+          <li>
+            <img src="https://imgcentauro-a.akamaihd.net/500x500/9722532V/camisa-do-campinense-i-22-super-bolla-masculina-img.jpg" alt="Camisa 14">
+            
+            <p>Camisa do Campinense</p>
+            <p>Preço: R$ 200,00</p>
+            <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+        </li>
+        <li>
+          <img src="https://static.netshoes.com.br/produtos/camisa-river-pi-ii-1718-sn-torcedor-rinat-masculina/24/C76-0078-024/C76-0078-024_zoom1.jpg?ts=1675195675&ims=544x" alt="Camisa 15">
+          
+          <p>Camisa do River-PI</p>
+          <p>Preço: R$ 200,00</p>
+          <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+      </li>
+      <li>
+        <img src="https://static.netshoes.com.br/produtos/camisa-super-bolla-sampaio-correa-i-2022/60/2IB-0331-060/2IB-0331-060_zoom1.jpg?ts=1648583554" alt="Camisa 16">
+        
+        <p>Camisa do Sampaio Correia</p>
+        <p>Preço: R$ 200,00</p>
+        <a href="/usuarios/adicionar_ao_carrinho/"> <button>Adicionar ao Carrinho</button>
+    </li>
+        </li>
+      </li>
+            </ul>
             <div class="informacoes">
                 <!-- Suas informações aqui... -->
             </div>
@@ -64,6 +301,7 @@
     </main>
     <footer>
         <!-- Seu conteúdo de rodapé aqui... -->
+        <a href="/usuarios/carrinho/"><button>CARRINHO</button></a>
     </footer>
 </body>
 </html>
