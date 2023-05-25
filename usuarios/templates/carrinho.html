@@ -13,78 +13,94 @@
             margin: 0;
             background-color: #f8f8f8;
             font-family: Arial, sans-serif;
-          }
-          
-          h1 {
-            margin-top: 5;
-            padding-top: 20px;
-            margin-left: 80px;
-            font-size: 36px;
-            font-weight: bold;
-          }
-          
-          .container {
-            display: flex;
-            flex: 1;
-            margin-bottom: 20px;
-            align-items: center;
-          }
-          
-          .product-image {
-            width: 300px;
-            height: 300px;
-            background-color: #f1f1f1;
-            margin-left: 100px;
-            margin-right: 300px;
-            border: 2px solid black;
-          }
-          
-          .product-details {
-            display: flex;
-            flex-direction: column;
-            font-size: 24px;
-          }
-          
-          .detail {
-            margin-bottom: 10px;
-          }
-          
-          .buttons {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 20px;
-          }
-          
-          button {
+        }
+        
+        header {
             background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-          }
-          
-          button:hover {
-            background-color: #3e8e41;
-          }
-          
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+          height: 80px;
+          align: center;
+        }
+        
+        h1 {
+          margin-top: 5;
+          padding-top: 20px;
+          margin-left: 80px;
+          font-size: 36px;
+          font-weight: bold;
+        }
+        
+        .container {
+          display: flex;
+          flex: 1;
+          margin-bottom: 20px;
+          align-items: center;
+        }
+        
+        .product-image {
+          width: 300px;
+          height: 300px;
+          background-color: #f1f1f1;
+          margin-left: 100px;
+          margin-right: 300px;
+          border: 2px solid black;
+          background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2501px-Shopping_cart_icon.svg.png");
+          background-size: cover;
+          background-position: center;
+        }
+        
+        .product-details {
+          display: flex;
+          flex-direction: column;
+          font-size: 24px;
+        }
+        
+        .detail {
+          margin-bottom: 10px;
+        }
+        
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 20px;
+        }
+        
+        button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 18px;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          background-color: #3e8e41;
+        }
+        
     </style>
 </head>
 <body>
-    <h1>Meu Carrinho</h1>
-    <div class="container">
-        <div class="product-image">
-          
-        </div>
-        <div class="product-details">
-            <div class="detail">Tamanho: </div>
-            <div class="detail">Valor: R$ </div>
-            <div class="detail">Total: R$ </div>
-        </div>
+  <header>
+    <img src="https://yt3.googleusercontent.com/BsYDlC_6Z4acMxccGp56tGz_rmjbaiugT1oNcyELOXQFvzDaVI0D0IuIdpFXOsrDFZyJMRTkl5Y=s176-c-k-c0x00ffffff-no-rj" alt="Logo da Camisas NE">
+  </header>
+  
+  <h1>Meu Carrinho</h1>
+  <div class="container">
+    <div class="product-image"></div>
+    <div class="product-details">
+      <div class="detail">Tamanho: </div>
+      <div class="detail">Valor: R$ </div>
+      <div class="detail">Total: R$ </div>
     </div>
-    <div class="buttons">
-        <a href="/usuarios/home/"><button>home</button></a>
-        <button onclick="location.href='finalizar'">Confirmar Compra</button>
-    </div>
-</body>
-</html>
+  </div>
+  <div class="buttons">
+    <a href="/usuarios/home/"><button>home</button></a>
+    <button onclick="location.href='finalizar'">Confirmar Compra</button>
