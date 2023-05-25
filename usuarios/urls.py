@@ -1,5 +1,4 @@
-from django.urls import path, include
-from django.contrib import admin
+from django.urls import path
 from . import views
 
 urlpatterns = [
@@ -16,4 +15,5 @@ urlpatterns = [
     path('buscar/', views.buscar_produto, name='buscar_produto'),
     path('order_status/<int:order_id>/', views.order_status, name='order_status'),
     path('rastrear/', views.rastrear, name='rastrear'),
+    path('devolucao.html', views.devolucao_produto, name='devolucao_produto'),
 ]

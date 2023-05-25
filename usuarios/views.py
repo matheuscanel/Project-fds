@@ -220,3 +220,17 @@ def order_status(request, order_id):
 
 def rastrear(request):
     return render(request, 'pagamento/rastrear.html')
+
+def devolucao_produto(request):
+    if request.method == 'POST':
+        # Processar o formulário aqui
+        produto_id = request.POST.get('produto_id')
+        motivo = request.POST.get('motivo')
+        # Faça o que precisar com os dados do formulário
+
+        # Redirecionar para uma página de confirmação ou outra página desejada
+        return redirect('pagina_de_confirmacao')
+
+    else:
+        # Renderizar o formulário
+        return render(request, 'devolucao.html')

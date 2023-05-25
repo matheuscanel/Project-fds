@@ -1,10 +1,6 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
-from django.contrib.auth.models import User
-from django.db import models
-from django.conf import settings
-
 
 class Produto(models.Model):
     nome = models.CharField(max_length=255)
@@ -21,22 +17,9 @@ class ItemCarrinho(models.Model):
     quantidade = models.PositiveIntegerField(default=1)
     carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)
 
-class UsuariosCarrinhoMixin:
-    def adicionar_produto(self, produto, quantidade=1):
-        item_carrinho, criado = ItemCarrinho.objects.get_or_create(
-            produto=produto,
-            carrinho=self
-        )
-        if not criado:
-            item_carrinho.quantidade += quantidade
-            item_carrinho.save()
-
 class CustomUser(AbstractUser):
     receber_emails = models.BooleanField(default=False)
     time_coracao = models.CharField(max_length=255, null=True, blank=True)
-
-    from django.db import models
-from django.contrib.auth.models import User
 
 class Avaliacao(models.Model):
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -69,3 +52,9 @@ class Order(models.Model):
     def __str__(self):
         return f'Pedido {self.id} - {self.product}'
     
+class Devolucao(models.Model):
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    numero_pedido = models.CharField(max_length=200)
+    produto = models.CharField(max_length=200)
+    comentario = models.TextField()
+    data_devolucao = models.DateTimeField(auto_now_add=True)
