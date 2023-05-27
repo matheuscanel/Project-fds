@@ -1,10 +1,7 @@
 <html>
     <head>
       <title>Login</title>
-      <header>
-        <img src="https://yt3.googleusercontent.com/BsYDlC_6Z4acMxccGp56tGz_rmjbaiugT1oNcyELOXQFvzDaVI0D0IuIdpFXOsrDFZyJMRTkl5Y=s176-c-k-c0x00ffffff-no-rj" alt="Logo da Camisas NE">
-        
-        </header>
+    
     <style>
       header {
         background-color: #4CAF50;
@@ -15,12 +12,17 @@
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         
       }
+      h2{
+        font-family: Arial, sans-serif;
+        color: #4CAF50;
+      }
       
       img {
         height: 100px;
       }
         body {
             background-color: #f2f2f2;
+            margin:0px;
           }
           
           form {
@@ -65,7 +67,12 @@
     </head>
     
     <body>
+      <header>
+        <img src="https://yt3.googleusercontent.com/BsYDlC_6Z4acMxccGp56tGz_rmjbaiugT1oNcyELOXQFvzDaVI0D0IuIdpFXOsrDFZyJMRTkl5Y=s176-c-k-c0x00ffffff-no-rj" alt="Logo da Camisas NE">
+        
+        </header>
         <form action = "{% url 'login' %}" method = "POST"> {% csrf_token %}
+          <H2>Login</H2>
           
           <input type = "text" placeholder="Nome de usuário" name="username">
             <br>
