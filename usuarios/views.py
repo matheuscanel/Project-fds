@@ -64,7 +64,13 @@ def login(request):
 
 def home(request):
     if request.method == "GET":
-        return render(request, 'home.html')
+        query = request.GET.get('q')
+        produtos = Produto.objects.all()
+        
+        if query:
+            produtos = produtos.filter(nome__icontains=query)
+        
+        return render(request, 'home.html', {'produtos': produtos})
 
 
 def team_selection(request):

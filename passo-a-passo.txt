@@ -1,0 +1,91 @@
+1) CRIAR VIRTUALENV
+    -> (TERMINAL) virtualenv .venv 
+    -> (TERMINAL) .venv\Scripts\activate
+        
+2) BAIXAR AS BIBLIOTECAS
+    -> (TERMINAL) pip install django
+    -> (TERMINAL) pip install stripe
+    -> (TERMINAL) pip install Pillow
+    -> podem ter outras que o terminal informa que precisa baixar para o codigo funcionar
+
+3) CRIAR O BANCO DE DADOS
+    -> (TERMINAL) python manage.py makemigrations
+    -> (TERMINAL) python manage.py migrate
+    -> agora todas as tabelas já estão criadas no arquivo db.sqlite3
+        -> se vc n tem a extensão do sqlite pro VSCODE recomendo baixar na parte de extensões,
+        pq deixa tudo mais bonito, tabelado, etc
+
+4) INSERIR OS PRODUTOS NO BANCO DE DADOS
+    -> (TERMINAL) python manage.py shell
+    -> (TERMINAL) COLAR ESSE CÓDIGO NO TERMINAL:
+
+from usuarios.models import Produto
+
+produto1 = Produto(nome="Camisa do Náutico", descricao="Camisa 1", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-nseis-nautico-i-2022/16/RDH-0026-016/RDH-0026-016_zoom1.jpg?ts=1657643906&ims=544x", estoque=50)
+
+produto1.save()
+
+produto2 = Produto(nome="Camisa do Sport", descricao="Camisa 2", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-sport-recife-i-2021-sn-torcedor-umbro-masculina/02/2IA-1390-002/2IA-1390-002_zoom1.jpg?ts=1656919019&ims=544x", estoque=50)
+
+produto2.save()
+
+produto3 = Produto(nome="Camisa do Santa Cruz", descricao="Camisa 3", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-santa-cruz-i-2122-sn-torcedor-volt-masculina/23/MMC-0407-223/MMC-0407-223_zoom1.jpg?ts=1640094422", estoque=50)
+
+produto3.save()
+
+produto4 = Produto(nome="Camisa do Salgueiro", descricao="Camisa 4", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-pratic-salgueiro-iii-2023/10/IFB-0025-010/IFB-0025-010_zoom1.jpg?ts=1674301613&ims=544x", estoque=50)
+
+produto4.save()
+
+produto5 = Produto(nome="Camisa do Ceara", descricao="Camisa 5", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-ceara-i-2223-sn-torcedor-vozao-masculina/26/QPS-0039-026/QPS-0039-026_zoom1.jpg?ts=1651770879&?ims=544xhttps://static.netshoes.com.br/produtos/camisa-ceara-i-2223-sn-torcedor-vozao-masculina/26/QPS-0039-026/QPS-0039-026_zoom1.jpg?ts=1651770879&?ims=1088x", estoque=50)
+
+produto5.save()
+
+produto6 = Produto(nome="Camisa do Fortaleza", descricao="Camisa 6", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-fortaleza-ii-2324-sn-leao-1918-masculina/14/FTU-0059-014/FTU-0059-014_zoom1.jpg?ts=1677158429&ims=544x", estoque=50)
+
+produto6.save()
+
+produto7 = Produto(nome="Camisa do Bahia", descricao="Camisa 7", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-masculina-bahia-2223-torcedor-away-ii-oficial/08/LPO-0391-008/LPO-0391-008_zoom1.jpg?ts=1672421727&ims=544x", estoque=50)
+
+produto7.save()
+
+produto8 = Produto(nome="Camisa do Vitória", descricao="Camisa 8", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-vitoria-i-2018-sn-torcedor-topper-masculina/02/D30-1003-002/D30-1003-002_zoom1.jpg?ts=1680022551&ims=544x", estoque=50)
+
+produto8.save()
+
+produto9 = Produto(nome="Camisa do ABC", descricao="Camisa 9", preco=200.00, imagem= "https://static.netshoes.com.br/produtos/camisa-elefante-mq-abc-fc-iii-2023/10/5N7-0001-010/5N7-0001-010_zoom1.jpg?ts=1680177639&ims=544x", estoque=50)
+
+produto9.save()
+
+produto10 = Produto(nome="Camisa do América-RN", descricao="Camisa 10", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-america-rn-kanxa-masculina/16/J96-0259-016/J96-0259-016_zoom1.jpg?ts=1680023466&ims=544x", estoque=50)
+
+produto10.save()
+
+produto11 = Produto(nome="Camisa do CSA", descricao="Camisa 11", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-volt-csa-i-2021-juvenil/08/MMC-0274-008/MMC-0274-008_zoom1.jpg?ts=1625693840&ims=544x", estoque=50)
+
+produto11.save()
+
+produto12 = Produto(nome="Camisa do CRB", descricao="Camisa 12", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-regatas-crb-alagoas-iii-2022/60/0J8-0019-060/0J8-0019-060_zoom1.jpg?ts=1664816672&ims=544x", estoque=50)
+
+produto12.save()
+
+produto13 = Produto(nome="Camisa do Botafogo, descricao="Camisa 13", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-wa-sport-botafogo-pb-i-2022/06/FUU-0044-006/FUU-0044-006_zoom1.jpg?ts=1650906451&ims=544x", estoque=50)
+
+produto13.save()
+
+produto14 = Produto(nome="Camisa do Campinense", descricao="Camisa 14", preco=200.00, imagem="https://imgcentauro-a.akamaihd.net/500x500/9722532V/camisa-do-campinense-i-22-super-bolla-masculina-img.jpg", estoque=50)
+
+produto14.save()
+
+produto15 = Produto(nome="Camisa do River-PI", descricao="Camisa 15", preco=200.00, imagem="https://static.netshoes.com.br/produtos/camisa-river-pi-ii-1718-sn-torcedor-rinat-masculina/24/C76-0078-024/C76-0078-024_zoom1.jpg?ts=1675195675&ims=544x", estoque=50)
+
+produto15.save()
+
+produto16 = Produto(nome="Camisa do Sampaio Correia", descricao="Camisa 16", preco=200.00, imagem= "https://static.netshoes.com.br/produtos/camisa-super-bolla-sampaio-correa-i-2022/60/2IB-0331-060/2IB-0331-060_zoom1.jpg?ts=1648583554", estoque=50)
+
+produto16.save()
+
+exit()
+
+5) PARA RODAR A APLICAÇÃO
+    -> (TERMINAL) python manage.py runserver
