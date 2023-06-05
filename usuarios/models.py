@@ -10,12 +10,15 @@ class Produto(models.Model):
     estoque = models.PositiveIntegerField()
 
 class Carrinho(models.Model):
-    usuario = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    total_compra = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
 class ItemCarrinho(models.Model):
+    carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)
     produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
     quantidade = models.PositiveIntegerField(default=1)
-    carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)
+    preco = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)
+    total_item = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
 class CustomUser(AbstractUser):
     receber_emails = models.BooleanField(default=False)

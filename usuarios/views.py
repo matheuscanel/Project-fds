@@ -1,10 +1,8 @@
-from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse
 from .models import CustomUser
-from django.contrib.auth import authenticate, login as login_django
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from .forms import TeamSelectionForm
-from django.shortcuts import redirect
 from .models import Carrinho, ItemCarrinho, Produto
 from .forms import AvaliacaoForm
 from .models import Compra, Cartao
@@ -15,10 +13,7 @@ from django.urls import reverse
 from django.contrib.auth import get_user_model
 from .models import Order
 from django.core.exceptions import PermissionDenied
-
-
-from django.shortcuts import render, redirect
-
+from django.shortcuts import render, redirect, get_object_or_404
 
 def cadastro(request):
     if request.method == "GET":
@@ -40,38 +35,54 @@ def cadastro(request):
             print(error)
             return HttpResponse('Erro: {}'.format(error))
 
-def login(request):
-    if request.method == "GET":
-        return render(request, 'login.html')
-
-    elif request.method == "POST":
+def login_view(request):
+    if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        print(f'username: {username}')
-        print(f'password: {password}')
+        user = authenticate(request, username=username, password=password)
 
-        user = authenticate(username=username, password=password)
-        print(f'user: {user}')
-
-        if user:
-            login_required(request, user)
+        if user is not None:
+            login(request, user)
             return redirect('home')
         else:
-            return HttpResponse('Username ou senha invalidos')
+            return HttpResponse('Nome de usuário ou senha inválidos.')
 
-
+    return render(request, 'login.html')
 
 def home(request):
     if request.method == "GET":
         query = request.GET.get('q')
         produtos = Produto.objects.all()
-        
+
         if query:
             produtos = produtos.filter(nome__icontains=query)
-        
+
         return render(request, 'home.html', {'produtos': produtos})
 
+    elif request.method == "POST" and request.user.is_authenticated:
+        produto_id = request.POST.get('produto_id')
+        produto = get_object_or_404(Produto, id=produto_id)
+
+        carrinho, created = Carrinho.objects.get_or_create(usuario=request.user)
+
+        # Verifica se o item já está presente no carrinho
+        item_carrinho, created = ItemCarrinho.objects.get_or_create(carrinho=carrinho, produto=produto)
+
+        if not created:
+            # Se o item já existe, incrementa a quantidade
+            item_carrinho.quantidade += 1
+        else:
+            # Se o item é criado, inicializa o valor total_item
+            item_carrinho.preco = produto.preco
+            item_carrinho.quantidade = 1
+
+        item_carrinho.save()
+
+        return redirect('carrinho')
+
+    else:
+        return redirect('login')
 
 def team_selection(request):
     if request.method == 'POST':
@@ -93,45 +104,38 @@ def team_selection(request):
     return render(request, 'team_selection.html', {'form': form})
 
 
-def adicionar_ao_carrinho(request, produto_id):
-    produto = get_object_or_404(Produto, pk=produto_id)
-    carrinho, _ = Carrinho.objects.get_or_create(usuario=request.user)
-
-    item, criado = ItemCarrinho.objects.get_or_create(
-        produto=produto,
-        carrinho=carrinho
-    )
-
-    if not criado:
-        item.quantidade += 1
-        item.save()
-
-    return redirect('nome_da_view_da_loja')
-
-
 def inicial(request):
     return render(request, 'inicial.html')
 
+def carrinho(request):
+    if request.user.is_authenticated:
+        carrinho, created = Carrinho.objects.get_or_create(usuario=request.user)
+        itens_carrinho = ItemCarrinho.objects.filter(carrinho=carrinho)
 
-def exibir_carrinho(request):
-    if request.method == 'GET':
-        if request.user.is_authenticated:
-            try:
-                carrinho = Carrinho.objects.get(usuario_id=request.user.id)
-                itens_carrinho = ItemCarrinho.objects.filter(carrinho=carrinho)
-            except Carrinho.DoesNotExist:
-                carrinho = None
-                itens_carrinho = None
-        else:
-            carrinho = None
-            itens_carrinho = None
+        total = 0
 
-        context = {
-            'carrinho': carrinho,
-            'itens_carrinho': itens_carrinho,
-        }
+        for item_carrinho in itens_carrinho:
+            item_carrinho.total_item = item_carrinho.preco * item_carrinho.quantidade
+            item_carrinho.save()
+            total += item_carrinho.total_item
 
-        return render(request, 'carrinho.html', context)
+        carrinho.total_compra = total
+        carrinho.save()
+
+        return render(request, 'carrinho.html', {'itens_carrinho': itens_carrinho, 'total': total})
+    else:
+        return redirect('login')
+
+def remover_item_carrinho(request, item_carrinho_id):
+    item_carrinho = get_object_or_404(ItemCarrinho, id=item_carrinho_id)
+    item_carrinho.quantidade -= 1
+    
+    if item_carrinho.quantidade <= 0:
+        item_carrinho.delete()
+    else:
+        item_carrinho.save()
+    
+    return redirect('carrinho')
 
 def avaliar(request):
     if request.method == 'POST':
