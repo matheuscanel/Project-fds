@@ -62,6 +62,8 @@
     <br> <br>
        <b>LINK DO DRIVE: </b><a href="url">https://drive.google.com/drive/folders/10L981qgCX8zqZXlHi9AW7lybLNv0XtmI?hl=pt-BR</a>
     <br>  <br>
+         <b>LINK DOS SLIDES DA APRESENTAÇÃO: </b><a href="url">https://www.canva.com/design/DAFlhPEdRLk/njl6F9EQTAUYksycNSyXgw/edit?utm_content=DAFlhPEdRLk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton</a>
+    <br>  <br>
        <b>Relato de entrega 3: </b>  Para a entrega 3 fomos divididos em duplas para realização das atividades, onde cada dupla era responsável por uma história, e o grupo realizou em conjunto o TDD e o AWS, além disso, todos estavam responsáveis pelo direcionamento de paginas e urls no django. As duplas montadas foram Lucas Emery e João Pedro Dornelas, Enzo Nunes e Antônio Valença e também Thiago von Sohsten e Sergio Gouveia. Portanto, foi dessa forma que foi organizada esta entrega do projeto NE de mais 3 funcionalidades, além de paginas html com css, login e autenticação de usuario,TDD e AWS.
        <br>  <br>
        <b>Video demonstrando o app e fluxograma estão disponiveis no google drive!! </b>
